@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.com" th:replace="base::Layout(~{::section})">
+  <head>
+	   <meta charset="utf-8">
+    <title>Inventory Management</title>
+  </head>
+  <body>
+	  <section>
+      <h1>Inventory Management System</h1>
+    <ul>
+        <li th:each="item : ${inventoryList}">
+            <span th:text="${item,productName}"></span>
+        </li>
+    </ul>
+      </section>
+  </body>
+</html>
